@@ -40,6 +40,8 @@ class CapistranoWizard < Thor::Group
     @stages = ask("Which stages do you want to use (defaults are #{default_stages.join(', ')}})?")
     if @stages.strip.empty?
       @stages = default_stages
+    else
+      @stages = @stages.split(/[\s,]+/)
     end
 
     @stages.each do |stage_name|
