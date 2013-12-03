@@ -1,0 +1,3 @@
+require './wizard'
+
+CapistranoWizard.start
